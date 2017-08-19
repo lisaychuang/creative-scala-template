@@ -14,3 +14,10 @@ object Example {
     image.draw
   }
 }
+
+
+// ANOTHER EXAMPLE, REMOVE THE // BEFORE THE CODE
+
+// object Example {
+//  (circle(100) fillColor Color.paleGoldenrod lineColor Color.indianRed).draw
+// }
