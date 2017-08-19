@@ -243,3 +243,65 @@ object One {
 }
 ```
 answer = error! circular loop.
+
+## Exercise 4.4 Abstraction
+
+### Exercise: Archery Again
+```
+val target = (
+    (circle(10) fillColor Color.red) on
+    (circle(20) fillColor Color.white) on
+    (circle(30) fillColor Color.red)
+)
+
+val stand = (
+    (rectangle(5,20) fillColor Color.white) above
+    (rectangle(20,5) fillColor Color.brown) 
+)
+
+val grass = (
+    (rectangle(90,30) fillColor Color.green)
+)
+
+val image = (target above stand above grass).draw
+```
+
+### Exercise: Streets Ahead
+
+val roof = (
+    triangle(30,30) fillColor Color.brown
+)
+
+val door = (
+    (square(10) fillColor Color.red lineColor(Color.red.alpha(0.0.normalized))) above
+    (rectangle(5,20) fillColor Color.black) on
+    square(30) fillColor Color.red
+)
+
+val house = roof above door
+
+val tree = (
+    (circle(22) fillColor Color.green) above
+    (rectangle(5,18) fillColor Color.brown)
+)
+
+val bricks = (
+    (
+        (rectangle(25,2) fillColor Color.yellow) beside
+        rectangle(5,2) fillColor Color.black
+    ) above
+    rectangle(30,2) fillColor Color.black
+)
+
+val street = (
+    bricks beside bricks beside bricks
+)
+
+val singleHome = (
+    (house beside tree) above street 
+)
+
+val streetView = singleHome beside singleHome beside singleHome
+
+streetView.draw
+
