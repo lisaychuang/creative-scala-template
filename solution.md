@@ -168,3 +168,78 @@ Add green ground area:
 ).draw
 ```
 
+## 4.3.5 Scope Exercises
+
+### Exercise 1
+```
+val a = 1
+val b = 2
+val answer = a + b
+```
+answer = 3
+
+### Exercise 2
+```
+object One {
+  val a = 1
+
+  object Two {
+    val a = 3
+    val b = 2
+  }
+
+  object Answer {
+    val answer = a + Two.b
+  }
+}
+```
+answer = 3
+
+### Exercise 3
+```
+object One {
+  val a = 5
+  val b = 2
+  
+  object Answer {
+    val a = 1
+    val answer = a + b
+  }
+}
+```
+answer = 3
+
+### Exercise 4
+```
+object One {
+  val a = 1
+  val b = a + 1
+  val answer = a + b
+}
+```
+answer = 3
+
+### Exercise 5
+```
+object One {
+  val a = 1
+  
+  object Two {
+    val b = 2
+  }
+  
+  val answer = a + b
+}
+```
+answer = error! Doesn't compile since ```b``` is not in scope
+
+### Exercise 6
+```
+object One {
+  val a = b - 1
+  val b = a + 1
+  
+  val answer = a + b
+}
+```
+answer = error! circular loop.
