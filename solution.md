@@ -290,7 +290,7 @@ val bricks = (
         (rectangle(25,2) fillColor Color.yellow) beside
         rectangle(5,2) fillColor Color.black
     ) above
-    rectangle(30,2) fillColor Color.black
+    rectangle(31,2) fillColor Color.black
 )
 
 val street = (
